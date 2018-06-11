@@ -1,9 +1,23 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const prefix = "-"
 
 client.on('ready', () => {
   client.user.setGame('-help ', 'https://www.twitch.tv/lucasdavid913/')
 })   
+
+  client.on('message', message =>{
+  let args = message.content.split(" ").slice(1);
+
+  if ( message.content.startsWith(prefix+ "say")) {
+    message.delete()
+    const embed = new Discord.RichEmbed()
+    .setDescription(args.join(" "))
+    .setColor(0xff0000)
+   message.channel.sendEmbed(embed);
+  }
+
+});
 
   client.on('message', message => {    
     if(message.content.startsWith('-mass')) {
@@ -39,7 +53,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     if (msg.content === '-help') {
-      msg.channel.send('`? Commands ?` , -invite , -support , -info');
+      msg.channel.send('`? Commands ?` , -invite , -support , -info , -say');
     }
   });
 
