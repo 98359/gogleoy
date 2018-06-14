@@ -58,8 +58,6 @@ client.on('message', message =>{
 if (message.content.startsWith(prefix + 'botinfo')) {
   const embed = new Discord.RichEmbed()
   embed.addField('Name', message.user.name , true)
-  .setTitle('Prefix')
-  .setDescription(`-`)
   embed.addField('Owner', message.user.owner , true)
   embed.addField('ID', message.user.id, true)
   embed.setColor(`ff0000`)
