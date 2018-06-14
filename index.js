@@ -42,8 +42,7 @@ client.on('message', message =>{
     message.delete()
     let embed = new Discord.RichEmbed()
             .setTitle('No Invite Link')
-            .setDescription(`\`\`\`md\nUser: ${member}\`\`\`)
-            .setColor(0x4caf50)
+            .setColor(0xff0000)
             .setFooter('No invite link!')
             .setTimestamp()
         
