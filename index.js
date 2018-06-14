@@ -25,7 +25,7 @@ client.on('message', message =>{
 if ( message.content.startsWith(prefix+ "ping")) {
     let embed = new Discord.RichEmbed()
             .setTitle('Ping')
-            .setDescription(`\`\`\`md\nPing: ${client.ping}ms\`\`\``)
+            .setDescription(`\`\`\`md\nPing :${client.ping}ms\`\`\``)
             .setColor(0x4caf50)
             .setFooter('Bot pinged')
             .setTimestamp()
@@ -35,15 +35,14 @@ if ( message.content.startsWith(prefix+ "ping")) {
   
 });
 
-client.on('user', message =>{
+client.on('member', message =>{
   let args = message.content.split(" ").slice(1);
   
 if ( message.content.startsWith(prefix+ "credits")) {
     let embed = new Discord.RichEmbed()
-            .setTitle('${user}')
+            .setTitle(`\`\`\`md\n ${member}\`\`\``)
             .setDescription(`Credits: 500 :moneybag: `)
             .setColor(0x4caf50)
-            .setFooter('Bot pinged')
             .setTimestamp()
         
         message.channel.send(embed);
