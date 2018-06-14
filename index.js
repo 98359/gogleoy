@@ -32,6 +32,8 @@ if ( message.content.startsWith(prefix+ "ping")) {
         
         message.channel.send(embed);
   }
+  
+});
 
   client.on('message', message => {    
     if(message.content.startsWith('-mass')) {
