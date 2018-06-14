@@ -35,6 +35,22 @@ if ( message.content.startsWith(prefix+ "ping")) {
   
 });
 
+client.on('user', message =>{
+  let args = message.content.split(" ").slice(1);
+  
+if ( message.content.startsWith(prefix+ "credits")) {
+    let embed = new Discord.RichEmbed()
+            .setTitle('${user}')
+            .setDescription(`Credits: 500 :moneybag: `)
+            .setColor(0x4caf50)
+            .setFooter('Bot pinged')
+            .setTimestamp()
+        
+        message.channel.send(embed);
+  }
+  
+});
+
 client.on('message', message =>{
   let args = message.content.split(" ").slice(1);
 
