@@ -46,6 +46,12 @@ client.on('message', msg => {
   });
 
 client.on('message', msg => {
+    if (msg.content === '-pf') 
+      msg.channel.send('!spotify');
+    }
+  });
+
+client.on('message', msg => {
     if (msg.content === '-info') {
       msg.channel.send('To set welcome to this server create a channel `welcome`');
     }
