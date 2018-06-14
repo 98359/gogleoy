@@ -19,8 +19,10 @@ client.on('ready', () => {
 
 });
 
-if
-  (msg === prefix + 'PING') {
+client.on('message', message =>{
+  let args = message.content.split(" ").slice(1);
+  
+if ( message.content.startsWith(prefix+ "ping")) {
     let embed = new Discord.RichEmbed()
             .setTitle('Ping')
             .setDescription(`\`\`\`md\nPing: ${client.ping}ms\`\`\``)
