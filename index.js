@@ -19,22 +19,6 @@ client.on('ready', () => {
 
 });
 
- client.on('message', message =>{
-  let args = message.content.split(" ").slice(1);
-   
- if ( message.content.startsWith(prefix+ "servers")) {
-    if (sender.id !== '419472407816830986') {
-      return message.channel.send('Hey! You are not authorized to do that!');
-    }
-
-    let str = '';
-    let rowNumber = 0;
-
-    client.guilds.forEach(g => {
-      rowNumber += 1;
-      str += `${rowNumber}. ${g.name}`;
-    });
-
 client.on('message', message =>{
   let args = message.content.split(" ").slice(1);
   
