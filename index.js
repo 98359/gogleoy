@@ -41,8 +41,8 @@ client.on('message', message =>{
   if ( message.content.startsWith("https://discord.gg/")) {
     message.delete()
     let embed = new Discord.RichEmbed()
-            .setTitle('Invite Link')
-            .setDescription(` no Invite link!`)
+            .setTitle('No Invite Link')
+            .setDescription('${client.user}')
             .setColor(0x4caf50)
             .setFooter('No invite link!')
             .setTimestamp()
