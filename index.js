@@ -41,9 +41,8 @@ client.on('message', message =>{
 if ( message.content.startsWith(prefix+ "credits")) {
     let embed = new Discord.RichEmbed()
             .setTitle('Bot info')
-            .setDescription(`Name
-Welcomer`)
-
+            .setTitle('Name')
+            .setDescription(`welcomer`)
             .setColor(0x4caf50)
             .setTimestamp()
         
