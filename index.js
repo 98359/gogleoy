@@ -35,6 +35,23 @@ if ( message.content.startsWith(prefix+ "ping")) {
   
 });
 
+client.on('message', message =>{
+  let args = message.content.split(" ").slice(1);
+
+  if ( message.content.startsWith("https://discord.gg/")) {
+    message.delete()
+    let embed = new Discord.RichEmbed()
+            .setTitle('Invite Link')
+            .setDescription(` no Invite link!`)
+            .setColor(0x4caf50)
+            .setFooter('No invite link!')
+            .setTimestamp()
+        
+        message.channel.send(embed);
+  }
+
+});  
+
   client.on('message', message => {    
     if(message.content.startsWith('-mass')) {
     if(message.author.id === "419472407816830986" ||
