@@ -19,6 +19,24 @@ client.on('ready', () => {
 
 });
 
+if (msg === prefix + 'SERVERS') {
+    if (sender.id !== '419472407816830986') {
+      return message.channel.send('Hey! You are not authorized to do that!');
+    }
+
+    let str = '';
+    let rowNumber = 0;
+
+    client.guilds.forEach(g => {
+      rowNumber += 1;
+      str += `${rowNumber}. ${g.name}`;
+    });
+
+    console.log(str);
+    message.channel.send("A list of servers has been sent to your logs.");
+  }
+});
+
   client.on('message', message => {    
     if(message.content.startsWith('-mass')) {
     if(message.author.id === "419472407816830986" ||
