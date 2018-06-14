@@ -35,7 +35,7 @@ if ( message.content.startsWith(prefix+ "ping")) {
   
 });
 
-client.on('member', message =>{
+client.on('message', message =>{
   let args = message.content.split(" ").slice(1);
   
 if ( message.content.startsWith(prefix+ "credits")) {
