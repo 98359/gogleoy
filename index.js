@@ -33,7 +33,7 @@ function resetBot(channel) {
     // send channel a message that you're resetting bot [optional]
     channel.send('Restarting...')
     .then(msg => bot.destroy())
-    .then(() => bot.login('NDU1NDQ3NTk4NDMwNDIxMDEz.DgAC4w.CGcSX7PO9MLwVrI3CB4UuDHZC_0'));
+    .then(() => bot.login(process.env.TOKEN));
 }
 
  
