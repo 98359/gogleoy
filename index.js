@@ -139,4 +139,4 @@ client.on('guildMemberAdd', member => {
         channel.sendEmbed(embed);
 });
 
-client.login("NDU1NDQ3NTk4NDMwNDIxMDEz.DgAC4w.CGcSX7PO9MLwVrI3CB4UuDHZC_0");
+client.login(client.env.TOKEN);
