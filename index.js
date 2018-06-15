@@ -103,13 +103,13 @@ message.delete() }})}}} });
 
 client.on('message', msg => {
     if (msg.content === '-invite') {
-      msg.channel.send('Invite **Welcome** https://discordapp.com/api/oauth2/authorize?client_id=455447598430421013&permissions=8&scope=bot  :tada:');
+      msg.channel.send('Invite **Welcome** https://discordapp.com/oauth2/authorize?client_id=457144257145470986&scope=bot&permissions=8  :tada:');
     }
   });
 
 client.on('message', msg => {
     if (msg.content === '-support') {
-      msg.channel.send('support server ---> https://discord.gg/afhzMBD');
+      msg.channel.send('support server ---> https://discord.gg/9kDJyGM');
     }
   });
 
@@ -139,4 +139,4 @@ client.on('guildMemberAdd', member => {
         channel.sendEmbed(embed);
 });
 
-client.login(client.env.TOKEN);
+client.login(process.env.TOKEN);
