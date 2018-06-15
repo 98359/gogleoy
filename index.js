@@ -109,7 +109,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     if (msg.content === '-support') {
-      msg.channel.send('shupport server ---> https://discord.gg/afhzMBD');
+      msg.channel.send('support server ---> https://discord.gg/afhzMBD');
     }
   });
 
