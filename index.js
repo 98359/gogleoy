@@ -36,7 +36,7 @@ function resetBot(channel) {
     .then(() => bot.login('NDU1NDQ3NTk4NDMwNDIxMDEz.DgAC4w.CGcSX7PO9MLwVrI3CB4UuDHZC_0'));
 }
 
-  ' 
+ 
 
 client.on('message', message =>{
   let args = message.content.split(" ").slice(1);
