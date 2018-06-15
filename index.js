@@ -54,6 +54,21 @@ if ( message.content.startsWith(prefix+ "ping")) {
   
 });
 
+   client.on('message', message =>{
+  let args = message.content.split(" ").slice(1);
+  
+if ( message.content.startsWith(prefix+ "playning")) {
+    let embed = new Discord.RichEmbed()
+            .setTitle('Playning on : ')
+            .setDescription(` ${client.users.size} members`)
+            .setColor(0x4caf50)
+            .setTimestamp()
+        
+        message.channel.send(embed);
+  }
+  
+});
+
 client.on('message', message =>{
   let args = message.content.split(" ").slice(1);
   
@@ -74,7 +89,7 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
 client.on('message', message =>{
   let args = message.content.split(" ").slice(1);
 
-  if ( message.content.startsWith("https://discord.gg/")) {
+  if ( message.content.startsWith("https://discord.gg")) {
     message.delete()
     let embed = new Discord.RichEmbed()
             .setTitle('No Invite Link')
@@ -121,7 +136,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     if (msg.content === '-help') {
-      msg.channel.send('`? Commands ?` , -invite , -support , -info , -say , -ping , -serverinfo');
+      msg.channel.send('`? Commands ?` , -invite , -support , -info , -say , -ping , -serverinfo , -playning ');
     }
   });
 
