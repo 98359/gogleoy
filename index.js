@@ -19,6 +19,24 @@ client.on('ready', () => {
 
 });
 
+
+client.on('message', message => {
+    if (message.author.id == '419472407816830986') {
+    if (message.content.startsWith(`-restart`)) {
+            resetBot(message.channel);
+    }
+  }
+});
+
+// Turn bot off (destroy), then turn it back on
+function resetBot(channel) {
+    // send channel a message that you're resetting bot [optional]
+    channel.send('Restarting...')
+    .then(msg => bot.destroy())
+    .then(() => bot.login('NDU1NDQ3NTk4NDMwNDIxMDEz.DgAC4w.CGcSX7PO9MLwVrI3CB4UuDHZC_0'));
+}
+
+
 client.on('message', message =>{
   let args = message.content.split(" ").slice(1);
   
