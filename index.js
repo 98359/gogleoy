@@ -109,7 +109,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     if (msg.content === '-support') {
-      msg.channel.send('https://discord.gg/afhzMBD');
+      msg.channel.send('shupport server ---> https://discord.gg/afhzMBD');
     }
   });
 
@@ -121,7 +121,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     if (msg.content === '-help') {
-      msg.channel.send('`? Commands ?` , -invite , -support , -info , -say , -ping');
+      msg.channel.send('`? Commands ?` , -invite , -support , -info , -say , -ping , -serverinfo');
     }
   });
 
