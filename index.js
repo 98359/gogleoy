@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const prefix = "-"
 
 client.on('ready', () => {
-  client.user.setGame(` ${client.users.size} members | -help` , 'https://www.twitch.tv/lucasdavid913/')
+  client.user.setGame(` ${client.servers.size} members | -help` , 'https://www.twitch.tv/lucasdavid913/')
 })   
 
   client.on('message', message =>{
