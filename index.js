@@ -130,7 +130,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
     if (msg.content === '-info') {
-      msg.channel.send('To set welcome to this server create a channel `welcome`');
+      msg.channel.send('To set welcome to this server create a channel `🎂welcome-goodbye-👋`');
     }
   });
 
@@ -141,7 +141,7 @@ client.on('message', msg => {
   });
 
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'welcome');
+    let channel = member.guild.channels.find('name', '🎂welcome-goodbye-👋');
     let memberavatar = member.user.avatarURL
         if (!channel) return;
         let embed = new Discord.RichEmbed()
